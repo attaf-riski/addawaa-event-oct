@@ -1,0 +1,1009 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spiritual Leadership Training - Dawaa Enterprise</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            overflow-x: hidden;
+        }
+        
+        .hero {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            color: white;
+            padding: 100px 20px 80px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="%23f59e0b" fill-opacity="0.1" d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,122.7C672,117,768,139,864,138.7C960,139,1056,117,1152,101.3C1248,85,1344,75,1392,69.3L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>') no-repeat bottom;
+            background-size: cover;
+            opacity: 0.3;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #f59e0b;
+            margin-bottom: 30px;
+        }
+        
+        .badge {
+            display: inline-block;
+            background: #f59e0b;
+            color: white;
+            padding: 8px 20px;
+            border-radius: 25px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+        
+        h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            animation: fadeInUp 0.8s ease-out;
+        }
+        
+        .hero h1 span {
+            color: #f59e0b;
+        }
+        
+        .subtitle {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+            opacity: 0.95;
+            animation: fadeInUp 1s ease-out;
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .cta-primary {
+            display: inline-block;
+            background: #f59e0b;
+            color: white;
+            padding: 18px 45px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 1.2rem;
+            margin: 10px;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 25px rgba(245, 158, 11, 0.4);
+            animation: fadeInUp 1.2s ease-out;
+        }
+        
+        .cta-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 35px rgba(245, 158, 11, 0.6);
+        }
+        
+        .problem-section {
+            background: linear-gradient(to bottom, #f8fafc, white);
+            padding: 80px 20px;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #1a1a2e;
+        }
+        
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 50px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .problems-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+        
+        .problem-card {
+            background: white;
+            padding: 35px;
+            border-radius: 15px;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            border-left: 5px solid #f59e0b;
+        }
+        
+        .problem-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 40px rgba(0,0,0,0.12);
+        }
+        
+        .problem-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+        
+        .solution-section {
+            background: linear-gradient(135deg, #0f3460 0%, #16213e 100%);
+            color: white;
+            padding: 80px 20px;
+            position: relative;
+        }
+        
+        .solution-content {
+            display: flex;
+            gap: 50px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        
+        .solution-text {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .solution-image {
+            flex: 1;
+            min-width: 300px;
+            text-align: center;
+        }
+        
+        .checkmark-list {
+            list-style: none;
+            margin-top: 30px;
+        }
+        
+        .checkmark-list li {
+            padding: 15px 0;
+            font-size: 1.1rem;
+            position: relative;
+            padding-left: 40px;
+        }
+        
+        .checkmark-list li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #f59e0b;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        
+        .benefits-section {
+            padding: 80px 20px;
+            background: white;
+        }
+        
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+        
+        .benefit-card {
+            text-align: center;
+            padding: 40px 25px;
+            background: linear-gradient(135deg, #f8fafc 0%, white 100%);
+            border-radius: 15px;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+        
+        .benefit-card:hover {
+            border-color: #f59e0b;
+            transform: scale(1.05);
+            box-shadow: 0 10px 30px rgba(245, 158, 11, 0.2);
+        }
+        
+        .benefit-icon {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+        }
+        
+        .program-section {
+            background: linear-gradient(to bottom, #f8fafc, white);
+            padding: 80px 20px;
+        }
+        
+        .timeline {
+            max-width: 900px;
+            margin: 50px auto;
+        }
+        
+        .timeline-item {
+            background: white;
+            padding: 30px;
+            margin-bottom: 25px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            border-left: 6px solid #f59e0b;
+            transition: all 0.3s ease;
+        }
+        
+        .timeline-item:hover {
+            transform: translateX(10px);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+        }
+        
+        .timeline-time {
+            color: #f59e0b;
+            font-weight: bold;
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+        }
+        
+        .timeline-title {
+            font-size: 1.4rem;
+            color: #1a1a2e;
+            margin-bottom: 10px;
+        }
+        
+        .coach-section {
+            background: white;
+            padding: 80px 20px;
+        }
+        
+        .coach-content {
+            display: flex;
+            gap: 50px;
+            align-items: center;
+            max-width: 1000px;
+            margin: 50px auto;
+            flex-wrap: wrap;
+        }
+        
+        .coach-image {
+            flex: 1;
+            min-width: 300px;
+            text-align: center;
+        }
+        
+        .coach-bio {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .coach-highlight {
+            background: #f59e0b;
+            color: white;
+            padding: 25px;
+            border-radius: 10px;
+            margin-top: 25px;
+            font-weight: 500;
+            font-size: 1.1rem;
+        }
+        
+        .pricing-section {
+            background: linear-gradient(135deg, #16213e 0%, #0f3460 100%);
+            color: white;
+            padding: 80px 20px;
+        }
+        
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            max-width: 900px;
+            margin: 50px auto;
+        }
+        
+        .price-card {
+            background: white;
+            color: #333;
+            padding: 45px 35px;
+            border-radius: 20px;
+            text-align: center;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .price-card.featured {
+            transform: scale(1.05);
+            box-shadow: 0 15px 50px rgba(245, 158, 11, 0.4);
+            border: 3px solid #f59e0b;
+        }
+        
+        .price-badge {
+            background: #f59e0b;
+            color: white;
+            padding: 8px 20px;
+            border-radius: 25px;
+            display: inline-block;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+        
+        .price-amount {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #f59e0b;
+            margin: 20px 0;
+        }
+        
+        .venue-section {
+            background: white;
+            padding: 80px 20px;
+        }
+        
+        .venue-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+        
+        .venue-card {
+            background: linear-gradient(135deg, #f8fafc 0%, white 100%);
+            padding: 35px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+        }
+        
+        .venue-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 35px rgba(0,0,0,0.12);
+        }
+        
+        .venue-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+        
+        .testimonial-section {
+            background: linear-gradient(to bottom, #f8fafc, white);
+            padding: 80px 20px;
+        }
+        
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+        
+        .testimonial-card {
+            background: white;
+            padding: 35px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            position: relative;
+        }
+        
+        .quote-icon {
+            font-size: 3rem;
+            color: #f59e0b;
+            opacity: 0.3;
+            position: absolute;
+            top: 20px;
+            right: 25px;
+        }
+        
+        .cta-section {
+            background: linear-gradient(135deg, #f59e0b 0%, #ff8c00 100%);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+        
+        .urgency-text {
+            font-size: 1.3rem;
+            margin: 20px 0;
+            font-weight: 500;
+        }
+        
+        .countdown {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 40px 0;
+            flex-wrap: wrap;
+        }
+        
+        .countdown-item {
+            background: rgba(255,255,255,0.2);
+            padding: 20px 30px;
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+        }
+        
+        .countdown-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            display: block;
+        }
+        
+        .countdown-label {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+        
+        footer {
+            background: #1a1a2e;
+            color: white;
+            padding: 50px 20px 30px;
+            text-align: center;
+        }
+        
+        .footer-contact {
+            margin: 20px 0;
+            font-size: 1.1rem;
+        }
+        
+        .social-links {
+            margin: 30px 0;
+        }
+        
+        .social-links a {
+            color: white;
+            margin: 0 15px;
+            font-size: 1.5rem;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .social-links a:hover {
+            color: #f59e0b;
+        }
+        
+        .floating-cta {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 1000;
+            animation: bounce 2s infinite;
+        }
+        
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        @media (max-width: 768px) {
+            h1 { font-size: 2.2rem; }
+            .subtitle { font-size: 1.1rem; }
+            .section-title { font-size: 2rem; }
+            .solution-content { flex-direction: column; }
+            .coach-content { flex-direction: column; }
+            .floating-cta { bottom: 20px; right: 20px; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="logo">🎯 DAWAA ENTERPRISE</div>
+            <div class="badge">TRAINING AMAL</div>
+            <h1>SPIRITUAL <span>LEADERSHIP</span></h1>
+            <p class="subtitle">Awaken Leadership Through Iman and Taqwa</p>
+            <p style="font-size: 1.2rem; margin-bottom: 30px; max-width: 700px; margin-left: auto; margin-right: auto;">
+                Transformasi Kepemimpinan Berbasis Nilai Spiritual untuk Organisasi yang Berintegritas dan Berkelanjutan
+            </p>
+            <a href="#daftar" class="cta-primary">🎯 DAFTAR SEKARANG</a>
+        </div>
+    </section>
+
+    <!-- Problem Section -->
+    <section class="problem-section">
+        <div class="container">
+            <h2 class="section-title">Tantangan Kepemimpinan Modern</h2>
+            <p class="section-subtitle">
+                Dalam dunia yang terus berubah, kepemimpinan yang sukses tidak lagi hanya ditentukan oleh kecerdasan dan strategi semata
+            </p>
+            <div class="problems-grid">
+                <div class="problem-card">
+                    <div class="problem-icon">⚠️</div>
+                    <h3>Krisis Integritas</h3>
+                    <p>Banyak organisasi menghadapi masalah kepercayaan akibat kepemimpinan yang tidak berintegritas dan tidak konsisten antara ucapan dan tindakan.</p>
+                </div>
+                <div class="problem-card">
+                    <div class="problem-icon">🔄</div>
+                    <h3>Turnover Tinggi</h3>
+                    <p>Tim yang tidak termotivasi dan kehilangan visi bersama mengakibatkan tingginya pergantian karyawan dan produktivitas yang menurun.</p>
+                </div>
+                <div class="problem-card">
+                    <div class="problem-icon">💔</div>
+                    <h3>Kehilangan Makna</h3>
+                    <p>Pemimpin yang hanya fokus pada target materialistik tanpa fondasi spiritual mengalami kekosongan makna dan burnout.</p>
+                </div>
+                <div class="problem-card">
+                    <div class="problem-icon">⚖️</div>
+                    <h3>Keputusan Tanpa Nilai</h3>
+                    <p>Ketiadaan kompas moral dalam pengambilan keputusan menyebabkan pilihan yang merugikan jangka panjang meskipun menguntungkan jangka pendek.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solution Section -->
+    <section class="solution-section">
+        <div class="container">
+            <h2 class="section-title">Solusi: Spiritual Leadership</h2>
+            <div class="solution-content">
+                <div class="solution-text">
+                    <p style="font-size: 1.2rem; margin-bottom: 25px;">
+                        Kepemimpinan yang efektif harus berlandaskan pada <strong>integritas, moral, dan etika</strong> yang bersumber dari kedalaman spiritual.
+                    </p>
+                    <p style="font-size: 1.1rem; margin-bottom: 25px;">
+                        Training "Spiritual Leadership" dirancang untuk membekali para pemimpin dengan nilai-nilai <strong>iman dan takwa</strong> sebagai fondasi utama dalam memimpin organisasi menuju kesuksesan yang berkelanjutan dan bermakna.
+                    </p>
+                    <ul class="checkmark-list">
+                        <li>Membangun kepemimpinan yang autentik dan berintegritas</li>
+                        <li>Mengintegrasikan nilai-nilai spiritual dalam pengambilan keputusan</li>
+                        <li>Menciptakan budaya organisasi yang bermakna dan inspiratif</li>
+                        <li>Mengembangkan ketahanan mental dan spiritual dalam menghadapi tantangan</li>
+                        <li>Memimpin dengan teladan dan ketulusan hati</li>
+                    </ul>
+                </div>
+                <div class="solution-image">
+                    <div style="font-size: 120px;">🌟</div>
+                    <h3 style="margin-top: 20px; font-size: 1.5rem;">Kepemimpinan yang Transformatif</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="benefits-section">
+        <div class="container">
+            <h2 class="section-title">Manfaat yang Akan Anda Dapatkan</h2>
+            <p class="section-subtitle">
+                Investasi terbaik adalah investasi pada diri sendiri dan kemampuan memimpin dengan hati
+            </p>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">🎯</div>
+                    <h3>Kepemimpinan Autentik</h3>
+                    <p>Memimpin dengan jati diri yang kuat, konsisten, dan penuh integritas</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">💪</div>
+                    <h3>Ketahanan Mental</h3>
+                    <p>Menghadapi tekanan dan tantangan dengan tenang dan bijaksana</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">🤝</div>
+                    <h3>Tim yang Loyal</h3>
+                    <p>Membangun tim yang termotivasi dan berkomitmen jangka panjang</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">📈</div>
+                    <h3>Pertumbuhan Berkelanjutan</h3>
+                    <p>Organisasi yang berkembang dengan fondasi nilai yang kuat</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">🌱</div>
+                    <h3>Keseimbangan Hidup</h3>
+                    <p>Harmoni antara kesuksesan dunia dan ketenangan batin</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">✨</div>
+                    <h3>Legacy yang Bermakna</h3>
+                    <p>Meninggalkan warisan kepemimpinan yang menginspirasi</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Program Outline -->
+    <section class="program-section">
+        <div class="container">
+            <h2 class="section-title">Outline Training</h2>
+            <p class="section-subtitle">
+                Program komprehensif yang dirancang untuk transformasi kepemimpinan Anda
+            </p>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-time">08.00 - 08.30</div>
+                    <h3 class="timeline-title">SESI 1: Pembukaan & Ice Breaking</h3>
+                    <p>Perkenalan, membangun koneksi antar peserta, dan menciptakan suasana nyaman untuk pembelajaran yang efektif.</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-time">08.30 - 09.30</div>
+                    <h3 class="timeline-title">SESI 2: Konsep Dasar Spiritual Leadership</h3>
+                    <p>Memahami filosofi dan prinsip-prinsip fundamental kepemimpinan spiritual dalam konteks modern.</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-time">09.30 - 11.00</div>
+                    <h3 class="timeline-title">SESI 3: Introspeksi Diri - Kepemimpinan Dimulai dari Hati</h3>
+                    <p>Self-assessment mendalam untuk memahami kekuatan, kelemahan, dan potensi kepemimpinan diri.</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-time">13.00 - 14.30</div>
+                    <h3 class="timeline-title">SESI 4: Mengimplementasikan Nilai-Nilai Kepemimpinan</h3>
+                    <p>Praktik nyata dalam menerjemahkan nilai-nilai spiritual ke dalam tindakan kepemimpinan sehari-hari.</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-time">14.30 - 16.00</div>
+                    <h3 class="timeline-title">SESI 5: Workshop & Role Play</h3>
+                    <p>Simulasi situasi kepemimpinan nyata dan latihan penerapan konsep spiritual leadership.</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-time">16.00 - 16.30</div>
+                    <h3 class="timeline-title">SESI 6: Refleksi & Action Plan</h3>
+                    <p>Menyusun rencana aksi konkret untuk implementasi pembelajaran di organisasi masing-masing.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Coach Section -->
+    <section class="coach-section">
+        <div class="container">
+            <h2 class="section-title">Fasilitator Anda</h2>
+            <div class="coach-content">
+                <div class="coach-image">
+                    <div style="font-size: 150px;">👨‍🏫</div>
+                </div>
+                <div class="coach-bio">
+                    <h3 style="font-size: 2rem; color: #f59e0b; margin-bottom: 15px;">Ust. Muhammad Nur Salim</h3>
+                    <p style="font-size: 1.2rem; font-weight: 500; margin-bottom: 20px;">Global Coach</p>
+                    <p style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 20px;">
+                        Praktisi kepemimpinan dengan pengalaman puluhan tahun dalam membimbing para pemimpin organisasi, pesantren, sekolah, dan bisnis di seluruh Indonesia dan mancanegara.
+                    </p>
+                    <div class="coach-highlight">
+                        💼 Telah melatih ribuan pemimpin dari berbagai sektor<br>
+                        🎓 Expert dalam pengembangan kepemimpinan berbasis nilai<br>
+                        🌟 Konsultan untuk organisasi dan lembaga pendidikan
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing-section">
+        <div class="container">
+            <h2 class="section-title">Investasi Training</h2>
+            <p class="section-subtitle">
+                Pilih paket yang sesuai dengan kebutuhan Anda
+            </p>
+            <div class="pricing-grid">
+                <div class="price-card featured">
+                    <div class="price-badge">EARLY BIRD</div>
+                    <h3 style="font-size: 1.8rem; margin-bottom: 15px;">Hemat 27%</h3>
+                    <div class="price-amount">Rp 550.000</div>
+                    <p style="color: #666; margin-bottom: 20px;">Daftar sebelum 5 Oktober 2025</p>
+                    <p style="font-size: 0.9rem; color: #999; margin-bottom: 20px;">
+                        <del>Harga Normal: Rp 750.000</del>
+                    </p>
+                    <ul style="text-align: left; line-height: 2; margin-bottom: 25px;">
+                        <li>✓ Full day training</li>
+                        <li>✓ Materi lengkap</li>
+                        <li>✓ Sertifikat</li>
+                        <li>✓ Konsumsi & snack</li>
+                        <li>✓ Networking session</li>
+                    </ul>
+                    <a href="#daftar" class="cta-primary" style="display: block; text-align: center; background: #0f3460;">Daftar Regular</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Venue Section -->
+    <section class="venue-section">
+        <div class="container">
+            <h2 class="section-title">Lokasi & Jadwal</h2>
+            <p class="section-subtitle">
+                Pilih kota yang paling dekat dengan Anda
+            </p>
+            <div class="venue-grid">
+                <div class="venue-card">
+                    <div class="venue-icon">📍</div>
+                    <h3 style="font-size: 1.8rem; color: #f59e0b; margin-bottom: 15px;">SEMARANG</h3>
+                    <p style="font-size: 1.1rem; margin-bottom: 10px;"><strong>Tanggal:</strong> Kamis, 16 Oktober 2025</p>
+                    <p style="font-size: 1.1rem; margin-bottom: 10px;"><strong>Venue:</strong> Hotel Grasia Semarang</p>
+                    <p style="color: #666; margin-top: 15px;">Lokasi strategis di pusat kota dengan akses mudah</p>
+                </div>
+                <div class="venue-card">
+                    <div class="venue-icon">📍</div>
+                    <h3 style="font-size: 1.8rem; color: #f59e0b; margin-bottom: 15px;">SOLO</h3>
+                    <p style="font-size: 1.1rem; margin-bottom: 10px;"><strong>Tanggal:</strong> Minggu, 26 Oktober 2025</p>
+                    <p style="font-size: 1.1rem; margin-bottom: 10px;"><strong>Venue:</strong> Amarelo Hotel Solo</p>
+                    <p style="color: #666; margin-top: 15px;">Fasilitas modern dan nyaman untuk pembelajaran optimal</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Target Audience -->
+    <section class="problem-section">
+        <div class="container">
+            <h2 class="section-title">Training Ini Untuk Siapa?</h2>
+            <p class="section-subtitle">
+                Dirancang khusus untuk para pemimpin yang ingin membawa perubahan positif
+            </p>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">🏢</div>
+                    <h3>Pengusaha & CEO</h3>
+                    <p>Yang ingin membangun bisnis dengan fondasi nilai yang kuat dan berkelanjutan</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">🕌</div>
+                    <h3>Pemilik Pesantren</h3>
+                    <p>Yang ingin mengembangkan lembaga pendidikan Islam dengan kepemimpinan visioner</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">🎓</div>
+                    <h3>Kepala Sekolah</h3>
+                    <p>Yang ingin menciptakan lingkungan pendidikan yang inspiratif dan bermakna</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">👥</div>
+                    <h3>Pengurus Organisasi</h3>
+                    <p>Yang ingin memimpin dengan integritas dan memberikan dampak nyata</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">🌐</div>
+                    <h3>Pemimpin Komunitas</h3>
+                    <p>Yang ingin membangun komunitas yang solid dan berorientasi nilai</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">🏪</div>
+                    <h3>Pengusaha Ritel</h3>
+                    <p>Yang ingin mengembangkan bisnis dengan etika dan tanggung jawab sosial</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonial Section -->
+    <section class="testimonial-section">
+        <div class="container">
+            <h2 class="section-title">Kata Mereka yang Telah Mengikuti</h2>
+            <p class="section-subtitle">
+                Transformasi nyata dari para alumni training
+            </p>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="quote-icon">"</div>
+                    <p style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 20px;">
+                        "Training ini benar-benar membuka mata saya bahwa kepemimpinan sejati dimulai dari kedalaman spiritual. Bisnis saya tidak hanya tumbuh secara omzet, tapi juga dari segi kualitas tim dan kepercayaan pelanggan."
+                    </p>
+                    <h4 style="color: #f59e0b; font-size: 1.2rem;">Ahmad Fauzi</h4>
+                    <p style="color: #666;">CEO PT Berkah Sejahtera</p>
+                </div>
+                <div class="testimonial-card">
+                    <div class="quote-icon">"</div>
+                    <p style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 20px;">
+                        "Sebagai kepala sekolah, saya mendapat insight luar biasa tentang bagaimana memimpin dengan hati. Guru-guru dan siswa merasakan perubahan positif dalam kultur sekolah kami."
+                    </p>
+                    <h4 style="color: #f59e0b; font-size: 1.2rem;">Dr. Siti Aminah, M.Pd</h4>
+                    <p style="color: #666;">Kepala SMA Harapan Bangsa</p>
+                </div>
+                <div class="testimonial-card">
+                    <div class="quote-icon">"</div>
+                    <p style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 20px;">
+                        "Materi yang disampaikan sangat applicable dan tidak hanya teori. Saya langsung bisa implementasikan di pesantren dan hasilnya luar biasa. Santri lebih termotivasi dan pengurus lebih solid."
+                    </p>
+                    <h4 style="color: #f59e0b; font-size: 1.2rem;">Ustadz Abdullah Rahman</h4>
+                    <p style="color: #666;">Pengasuh Ponpes Al-Hikmah</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="benefits-section">
+        <div class="container">
+            <h2 class="section-title">Pertanyaan yang Sering Diajukan</h2>
+            <div style="max-width: 800px; margin: 50px auto;">
+                <div style="background: white; padding: 30px; margin-bottom: 20px; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.08); border-left: 5px solid #f59e0b;">
+                    <h3 style="color: #f59e0b; margin-bottom: 15px; font-size: 1.3rem;">Apakah training ini cocok untuk non-muslim?</h3>
+                    <p style="line-height: 1.8;">Training ini menggunakan pendekatan nilai-nilai spiritual universal yang dapat diterapkan oleh siapa saja yang ingin mengembangkan kepemimpinan berbasis integritas dan moral.</p>
+                </div>
+                <div style="background: white; padding: 30px; margin-bottom: 20px; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.08); border-left: 5px solid #f59e0b;">
+                    <h3 style="color: #f59e0b; margin-bottom: 15px; font-size: 1.3rem;">Apakah saya akan mendapat sertifikat?</h3>
+                    <p style="line-height: 1.8;">Ya, setiap peserta yang mengikuti training hingga selesai akan mendapatkan sertifikat dari Dawaa Enterprise sebagai bukti kompetensi.</p>
+                </div>
+                <div style="background: white; padding: 30px; margin-bottom: 20px; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.08); border-left: 5px solid #f59e0b;">
+                    <h3 style="color: #f59e0b; margin-bottom: 15px; font-size: 1.3rem;">Bagaimana jika saya tidak bisa hadir?</h3>
+                    <p style="line-height: 1.8;">Anda dapat menghubungi tim kami untuk opsi reschedule atau refund sesuai dengan kebijakan yang berlaku. Konfirmasi harus dilakukan H-7 sebelum acara.</p>
+                </div>
+                <div style="background: white; padding: 30px; margin-bottom: 20px; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.08); border-left: 5px solid #f59e0b;">
+                    <h3 style="color: #f59e0b; margin-bottom: 15px; font-size: 1.3rem;">Apakah ada follow-up setelah training?</h3>
+                    <p style="line-height: 1.8;">Ya, peserta akan mendapat akses ke grup alumni untuk berbagi pengalaman dan mendapat update materi serta coaching lanjutan dari fasilitator.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section" id="daftar">
+        <div class="container">
+            <h2 style="font-size: 3rem; margin-bottom: 20px;">Saatnya Transformasi Dimulai!</h2>
+            <p class="urgency-text">
+                ⏰ Promo Early Bird Berakhir dalam:
+            </p>
+            <div class="countdown">
+                <div class="countdown-item">
+                    <span class="countdown-number" id="days">00</span>
+                    <span class="countdown-label">Hari</span>
+                </div>
+                <div class="countdown-item">
+                    <span class="countdown-number" id="hours">00</span>
+                    <span class="countdown-label">Jam</span>
+                </div>
+                <div class="countdown-item">
+                    <span class="countdown-number" id="minutes">00</span>
+                    <span class="countdown-label">Menit</span>
+                </div>
+                <div class="countdown-item">
+                    <span class="countdown-number" id="seconds">00</span>
+                    <span class="countdown-label">Detik</span>
+                </div>
+            </div>
+            <p style="font-size: 1.3rem; margin: 30px 0;">
+                🎯 Kuota Terbatas! Hanya 50 peserta per batch<br>
+                💎 Investasi terbaik untuk masa depan kepemimpinan Anda
+            </p>
+            <a href="https://bit.ly/3KIDarH" target="_blank" class="cta-primary" style="background: white; color: #f59e0b; font-size: 1.4rem; padding: 20px 50px;">
+                📝 DAFTAR SEKARANG - HEMAT Rp 200.000
+            </a>
+            <p style="margin-top: 25px; font-size: 1.1rem;">
+                Atau hubungi: <strong>0823-1000-1949</strong>
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="logo" style="font-size: 2rem; margin-bottom: 20px;">🎯 DAWAA ENTERPRISE</div>
+            <p style="font-size: 1.1rem; margin-bottom: 20px;">
+                Memberdayakan Pemimpin untuk Masa Depan yang Lebih Baik
+            </p>
+            <div class="footer-contact">
+                📞 Contact Person: 0823-1000-1949<br>
+                🌐 www.dawaaenterprise.com<br>
+                📧 info@dawaaenterprise.com
+            </div>
+            <div class="social-links">
+                <a href="#" title="Instagram">📷</a>
+                <a href="#" title="Facebook">👍</a>
+                <a href="#" title="WhatsApp">💬</a>
+                <a href="#" title="LinkedIn">💼</a>
+            </div>
+            <p style="margin-top: 30px; opacity: 0.7;">
+                © 2025 Dawaa Enterprise. All rights reserved.
+            </p>
+        </div>
+    </footer>
+
+    <!-- Floating CTA -->
+    <a href="#daftar" class="floating-cta cta-primary">
+        🚀 DAFTAR
+    </a>
+
+    <script>
+        // Countdown Timer
+        const targetDate = new Date('2025-10-05T23:59:59').getTime();
+        
+        function updateCountdown() {
+            const now = new Date().getTime();
+            const distance = targetDate - now;
+            
+            if (distance < 0) {
+                document.getElementById('days').textContent = '00';
+                document.getElementById('hours').textContent = '00';
+                document.getElementById('minutes').textContent = '00';
+                document.getElementById('seconds').textContent = '00';
+                return;
+            }
+            
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            
+            document.getElementById('days').textContent = String(days).padStart(2, '0');
+            document.getElementById('hours').textContent = String(hours).padStart(2, '0');
+            document.getElementById('minutes').textContent = String(minutes).padStart(2, '0');
+            document.getElementById('seconds').textContent = String(seconds).padStart(2, '0');
+        }
+        
+        updateCountdown();
+        setInterval(updateCountdown, 1000);
+
+        // Smooth Scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Scroll Animation
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.problem-card, .benefit-card, .timeline-item, .testimonial-card, .venue-card').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'all 0.6s ease-out';
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html></ul>
+                    <a href="#daftar" class="cta-primary" style="display: block; text-align: center;">Daftar Early Bird</a>
+                </div>
+                <div class="price-card">
+                    <div class="price-badge">REGULAR</div>
+                    <h3 style="font-size: 1.8rem; margin-bottom: 15px;">Harga Normal</h3>
+                    <div class="price-amount">Rp 750.000</div>
+                    <p style="color: #666; margin-bottom: 20px;">Setelah 5 Oktober 2025</p>
+                    <p style="font-size: 0.9rem; color: #999; margin-bottom: 20px;">
+                        &nbsp;
+                    </p>
+                    <ul style="text-align: left; line-height: 2; margin-bottom: 25px;">
+                        <li>✓ Full day training</li>
+                        <li>✓ Materi lengkap</li>
+                        <li>✓ Sertifikat</li>
+                        <li>✓ Konsumsi & snack</li>
+                        <li>✓ Networking session</li>
